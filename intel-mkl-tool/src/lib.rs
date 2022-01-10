@@ -92,7 +92,7 @@
 
 #![cfg_attr(not(feature = "archive"), allow(dead_code))]
 
-use anyhow::*;
+use anyhow::{Result, bail};
 use std::path::*;
 
 mod config;

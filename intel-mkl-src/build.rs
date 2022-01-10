@@ -22,7 +22,7 @@
 
 #![cfg_attr(feature = "download", allow(unreachable_code))]
 
-use anyhow::*;
+use anyhow::{Result, bail};
 use intel_mkl_tool::*;
 use std::{env, path::*};
 
