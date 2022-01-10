@@ -118,7 +118,8 @@ impl Config {
         };
         libs.push("mkl_core".into());
         if matches!(self.parallel, Threading::OpenMP) {
-            libs.push("iomp5".into());
+            let iomp5 = format!("{}iomp5{}", mkl::PREFIX_IOMP, mkl::POSTFIX_IOMP);
+            libs.push(iomp5.into());
         }
         libs
     }

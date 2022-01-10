@@ -122,6 +122,12 @@ impl Entry {
             targets.seek(windows_mkl.join("compiler/lib/intel64"));
         }
 
+        let windows_iomp =
+            PathBuf::from("C:/Program Files (x86)/Intel/oneAPI/compiler/latest/windows/");
+        if windows_iomp.exists() {
+            targets.seek(windows_iomp.join("compiler/lib/intel64_win"));
+        }
+
         if targets.found_any() {
             return Ok(Self { config, targets });
         } else {
