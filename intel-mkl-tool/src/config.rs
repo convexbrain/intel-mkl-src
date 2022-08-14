@@ -1,5 +1,6 @@
 use anyhow::{bail, Result};
 use derive_more::Display;
+use crate::mkl;
 
 pub const VALID_CONFIGS: &[&str] = &[
     "mkl-dynamic-ilp64-iomp",
