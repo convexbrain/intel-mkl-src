@@ -113,6 +113,8 @@ mod mkl {
     pub const EXTENSION_STATIC: &'static str = "a";
     pub const EXTENSION_SHARED: &'static str = "so";
     pub const PREFIX: &'static str = "lib";
+    pub const PREFIX_IOMP: &'static str = "";
+    pub const POSTFIX_IOMP: &'static str = "";
     pub const VERSION_YEAR: u32 = 2020;
     pub const VERSION_UPDATE: u32 = 1;
 }
@@ -123,6 +125,8 @@ mod mkl {
     pub const EXTENSION_STATIC: &'static str = "a";
     pub const EXTENSION_SHARED: &'static str = "dylib";
     pub const PREFIX: &'static str = "lib";
+    pub const PREFIX_IOMP: &'static str = "";
+    pub const POSTFIX_IOMP: &'static str = "";
     pub const VERSION_YEAR: u32 = 2019;
     pub const VERSION_UPDATE: u32 = 3;
 }
@@ -133,6 +137,8 @@ mod mkl {
     pub const EXTENSION_STATIC: &'static str = "lib";
     pub const EXTENSION_SHARED: &'static str = "lib";
     pub const PREFIX: &'static str = "";
+    pub const PREFIX_IOMP: &'static str = "lib";
+    pub const POSTFIX_IOMP: &'static str = "md";
     pub const VERSION_YEAR: u32 = 2020;
     pub const VERSION_UPDATE: u32 = 1;
 }

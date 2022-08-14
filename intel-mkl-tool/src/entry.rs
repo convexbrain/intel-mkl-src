@@ -124,6 +124,19 @@ impl Entry {
             targets.seek(windows_mkl.join("compiler/lib/intel64"));
         }
 
+        // oneAPI for Windows
+        let windows_oneapi_root = std::env::var("ONEAPI_ROOT").map(|path| PathBuf::from(path));
+        if let Ok(path) = windows_oneapi_root {
+            let mkl_path = path.join("mkl/latest/lib/intel64");
+            if mkl_path.exists() {
+                targets.seek(mkl_path);
+            }
+            let iomp_path = path.join("compiler/latest/windows/compiler/lib/intel64_win");
+            if iomp_path.exists() {
+                targets.seek(iomp_path);
+            }
+        }
+
         if targets.found_any() {
             return Ok(Self { config, targets });
         } else {
